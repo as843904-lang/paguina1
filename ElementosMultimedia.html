@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Practica: Elementos Multimedia con iframe</title>
+<style>
+    body{font-family: Arial, Helvetica, sans-serif; background:#eef7ff; margin:0}
+    header,main,footer{max: width 980px; margin:0 auto;padding: 16px;}
+    header{ background:#fff; margin-top: 12px; border-radius: 10px;}
+    h1{margin: 8px 0 0 0;}
+    .card {background:#fff; border-radius: 10px;padding: 14px; margin: 12px 0;}
+    iframe { border: 0;}
+</style>
+</head>
+<body>
+    <header>
+        <h1> Practica: Elementos Multimedio con &lt;iframe&gt:</h1>
+        <p>Objetivo: Insertar contenido externo(video, mapa y documento) usando la etiqueta &lt;iframe&gt:. </p>
+    </header>
+    <main>
+        <section class="card">
+            <h2> Video de youtube </h2>
+            <iframe width ="560" height="315"
+            src="Aprende los Colores - Video Educativo para Niños! Sesame Street y Lucas (1).mp4"
+            title="Video educativo sobre tecnologia"
+            allowfullscreen loading="lazy">
+        </iframe>
+        </section>
+        <section class="card">
+            <h2>Mapa de Google Maps</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12666.315663446627!2d-98.8361494835106!3d19.294618146026963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce1e6ee63b2085%3A0xdd1848e0392f8407!2sCECYTEM%20Ixtapaluca%20II!5e0!3m2!1ses-419!2smx!4v1761074617244!5m2!1ses-419!2smx" 
+                width="600" height="400" style="border: 0;"allowfullscreen=""loading="lazy">
+            </iframe>
+        </section>
+        <section class="card">
+            <h2> Documento embebido </h2>
+            <iframe
+            src="Practica_adicionales/NEM principios y orientacioín pedagoígica.pdf"
+            width="600" height="400">
+        </iframe>
+        </section>
+    </main>
+    <footer>
+        <p><small> Practica educativa - Uso de Elementos multimedia con iFrame</small></p>
+    </footer>
+</body>
+</html>
