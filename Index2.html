@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang ="es">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+    <title> Adicciones - Practica HTML + CSS</title>
+    <style>
+        :root{
+            --bg: #f6f9ff;
+            --card: #ffffff;
+            --text: #0f172a;
+            --muted: #475569;
+            --acent: #2563eb;
+            --danger: #b91c1c;
+            --radius: 14px;
+            --shadow: 0 6px 24px rgba(15, 23, 42, .08);
+        }
+        *{box-sizing: border-box;}
+        body{
+            margin: 0; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+            background: linear-gradient(180deg, #f6f9ff 0%, #EEF4FF 100%);
+            color: var(--text); line-height: 1.6;
+        }
+        header{
+            background: var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin: 24px auto; padding: 22px;
+            max-width: 1000px;
+        }
+        header h1{margin: 0 0 6px 0;}
+        header p{margin: 0; color: var(--muted);}
+        main{ max-width: 1000px; margin: 0 auto; padding: 0 16px 32px;}
+        .card{
+            background: var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 18px 20px; margin: 18px 0;
+        }
+        .grid{
+            display: grid; gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+        .gallery img{
+            width: 100%; height: 180px; object-fit: cover;
+            border-radius: 10px; border: 1px solid #e2e8f0;
+        }
+        figure{margin: 0;}
+        figcaption{color: var(--muted); font-size: .9rem; margin-top: 6px;}
+        a{color: var(--acent); text-decoration: none;}
+        a:hover{text-decoration: underline;}
+        .warning{color: var(--danger); font-weight: 600;}
+        footer{text-align: center; color: var(--muted); padding: 24px 0 40px;}
+        .table{
+            width: 100%; border-collapse: collapse; margin-top: 8px;
+            border: 1px solid #e5e7eb;
+        }
+        .table th{
+            text-align: left; padding: 10px; color: white;
+            background: linear-gradient(135deg, #93c5fd, #1e3a8a);
+        }
+        .table td{ padding: 10px; border-top: 1px solid #e5e7eb;}
+        .badge{display: inline-block; padding: 4px 8px; border-radius: 999px;
+        background: #e0f2fe; color: #075985; font-size: .85rem;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Adicciones - Practica HTML + CSS </h1>
+        <p> Informacion basica, elementos multimedia y estilo embebido para una pagina educativa.</p>
+    </header>
+    <main>
+        <section class = "Card">
+            <h2> Que es una adiccion?</h2>
+            <p>Una<strong>Adiccion</strong> es una condicion caracterizada por la busqueda y consumo compulsivo de una sustancia o conducta,
+            a pesar de consecuencias negativas. Puede afectar la salud fisica, mental y las relaciones sociales</p>
+            <p class="warning">Si tu o laguien que conoces necesita ayuda,
+             consulta a profesionales de la salud o a lineas de atencion locales
+            </p>
+        </section>
+        <section class="card">
+            <h2> Galeria </h2>
+            <div class="grid gallery">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1553531888-a6fd2a8f9908?w=800&q=80" alt="Mano sosteniendo telefono movil, 
+                    simbolo de uso excesivo de dispositivos">
+                    <figcaption>Uso problematico de dispositivos.</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80" alt="Persona tomando bebida en un entorno social">
+                </figure>
+                <figcaption>Consumo de sustancias en contextos sociales.</figcaption>
+                    </figure>
+                        <figure>
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07c68e773?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Persona practicando meditación al aire libre">
+                        <figcaption>Estrategias de autocuidado y prevención.</figcaption>
+                    </figure>
+                    </div>
+                    </section>
+
+                    <section class="card">
+                        <h2>Video educativo</h2>
+                        <p class="badge" HTML5 - Controles nativos</p>
+                        <video width="640" 
+                            source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                            Tu navegador no soporta el elemento <code>video</code>.
+                        </video>
+                        <p>El video es de ejemplo. Puedes reemplazar la URL por un archivo local</p>
+                    </section>
+                    <section class="card">
+                <h2>Audio (mensaje breve)</h2>
+                <audio controls>
+                    <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento <code>audio</code>.
+                </audio>
+                <p>Este audio es demostrativo. Puedes sustituirlo por <code>mensaje.mp3</code> 
+                ubicado en la misma carpeta.</p>
+                </section>
+
+                <section class="card">
+                <h2>Señales de alerta</h2>
+                <table class="table" aria-label="Señales de alerta y acciones">
+                    <thead>
+                    <tr>
+                        <th>Señal</th>
+                        <th>Descripción</th>
+                    <th>Indicador</th>
+                    <th>Acción sugerida</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>Falta de control</td>
+                    <td>Dificultad para limitar el tiempo o consumo.</td>
+                    <td>Establecer horarios y pedir apoyo.</td>
+                    </tr>
+                    <tr>
+                    <td>Impacto en estudios/trabajo</td>
+                    <td>Descenso en el rendimiento o ausencias.</td>
+                    <td>Buscar orientación escolar/profesional.</td>
+                    </tr>
+                    <tr>
+                    <td>Aislamiento</td>
+                <td>Evitar actividades y contactos habituales.</td>
+                <td>Reconectar con redes de apoyo.</td>
+                </tr>
+                </table>
+                </section>
+
+                <section class="card">
+                <h2>Recursos y contactos</h2>
+                <ul>
+                    <li><a href="mailto:orientacion@centro.edu">Escribir a orientación escolar</a></li>
+                    <li><a href="tel:525555555555">Llamar a apoyo local</a></li>
+                    <li><a href="#top">Volver al inicio</a></li>
+                </ul>
+        </section>
+     </main>
+     <footer>
+        <small>Material educativo de practica HTML + CSS incrustado</small>
+     </footer>
+</body>
+</html>
